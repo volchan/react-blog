@@ -5,10 +5,6 @@ import { connect } from "react-redux";
 import { createPost } from "../actions";
 
 class PostNew extends Component {
-  errorDisplay({ meta: { touched, error} } = field) {
-    return `form-group ${touched && error ? "has-danger" : ""}`
-  }
-
   renderField(field) {
     const { meta: { touched, error} } = field;
 
