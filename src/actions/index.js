@@ -3,7 +3,7 @@ import Axios from "axios";
 import { FETCH_POST, FETCH_POSTS, CREATE_POST, DELETE_POST } from "./types";
 
 const ROOT_URL = "http://reduxblog.herokuapp.com/api";
-const API_KEY = "?key=RUBYRULEZ123"
+const API_KEY = "?key=RUBYRULEZ123";
 
 export const fetchPosts = () => {
   const request = Axios.get(`${ROOT_URL}/posts${API_KEY}`);
@@ -25,7 +25,7 @@ export const createPost = (values, callback) => {
 }
 
 export const fetchPost = (id) => {
-  const request = Axios.get(`${ROOT_URL}/posts/${id}${API_KEY}`)
+  const request = Axios.get(`${ROOT_URL}/posts/${id}${API_KEY}`);
 
   return ({
     type: FETCH_POST,
